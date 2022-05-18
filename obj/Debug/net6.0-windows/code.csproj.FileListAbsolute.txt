@@ -21,3 +21,26 @@ C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\ref\code.dll
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.LogoutConfirmation.resources
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.Properties.Resources.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\bin\Debug\net6.0-windows\code.exe
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\bin\Debug\net6.0-windows\code.deps.json
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\bin\Debug\net6.0-windows\code.runtimeconfig.json
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\bin\Debug\net6.0-windows\code.dll
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\bin\Debug\net6.0-windows\code.pdb
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.csproj.AssemblyReference.cache
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.CustomerView.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.LogoutConfirmation.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.ManagerView.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.Form1.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.Properties.Resources.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.ReceptionistView.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.TechnicianView.resources
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.csproj.GenerateResource.cache
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.AssemblyInfoInputs.cache
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.AssemblyInfo.cs
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.csproj.CoreCompileInputs.cache
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.dll
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\refint\code.dll
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.pdb
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\code.genruntimeconfig.cache
+C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Final Manager View\obj\Debug\net6.0-windows\ref\code.dll
