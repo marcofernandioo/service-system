@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj",
       "projectName": "code",
       "projectPath": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj",
       "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj",
+      "projectName": "code",
+      "projectPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj",
+      "packagesPath": "C:\\Users\\Vinsont\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\obj\\",
+>>>>>>> d94aba464e92ee2e183fe8fc2c60e8f57560976e
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace code
 {
-    public partial class ManagerView : Form
+    public partial class LoginView : Form
     {
-        public ManagerView()
+        public LoginView()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

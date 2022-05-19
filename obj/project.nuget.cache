@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "k0EUsQSKXCfxMz8xhwVnvjq3nBEZ9XsGtNgmPjQWUs8S68EXl4aZSxu1sjB2cU4JZ7nfLSdK7M8mFHRbQiyrMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj",
+=======
+  "dgSpecHash": "iexWwTUNO/gzbUg0puTKrOG2KhvJHclp90bPIFmAFeCrDOtILw8ZStwMqIw9Rp11olZLu/M+gN859Wzui5e7Yg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj",
+>>>>>>> d94aba464e92ee2e183fe8fc2c60e8f57560976e
   "expectedPackageFiles": [],
   "logs": []
 }
