@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Final Manager View\\code.csproj": {}
+    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Final Manager View\\code.csproj": {
+    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Final Manager View\\code.csproj",
+        "projectUniqueName": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj",
         "projectName": "code",
-        "projectPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Final Manager View\\code.csproj",
+        "projectPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj",
         "packagesPath": "C:\\Users\\Vinsont\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Final Manager View\\obj\\",
+        "outputPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

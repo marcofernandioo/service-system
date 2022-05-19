@@ -34,11 +34,6 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblFullname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnEditFullname = new System.Windows.Forms.Button();
             this.btnEditUsername = new System.Windows.Forms.Button();
             this.btnEditAddress = new System.Windows.Forms.Button();
@@ -46,6 +41,11 @@
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblProfilePage = new System.Windows.Forms.Label();
+            this.lblProfileFullname = new System.Windows.Forms.Label();
+            this.lblProfileUsername = new System.Windows.Forms.Label();
+            this.lblProfileAddress = new System.Windows.Forms.Label();
+            this.lblProfileRole = new System.Windows.Forms.Label();
+            this.lblProfileEmail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -105,57 +105,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(292, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(2, 24);
-            this.label2.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(292, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(2, 24);
-            this.label3.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(292, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(2, 24);
-            this.label4.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(292, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(2, 24);
-            this.label5.TabIndex = 16;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(292, 308);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(2, 24);
-            this.label6.TabIndex = 17;
             // 
             // btnEditFullname
             // 
@@ -229,15 +178,71 @@
             this.lblProfilePage.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblProfilePage.Location = new System.Drawing.Point(54, 40);
             this.lblProfilePage.Name = "lblProfilePage";
-            this.lblProfilePage.Size = new System.Drawing.Size(183, 39);
+            this.lblProfilePage.Size = new System.Drawing.Size(175, 37);
             this.lblProfilePage.TabIndex = 24;
             this.lblProfilePage.Text = "Profile Page";
+            // 
+            // lblProfileFullname
+            // 
+            this.lblProfileFullname.AutoSize = true;
+            this.lblProfileFullname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProfileFullname.Location = new System.Drawing.Point(304, 113);
+            this.lblProfileFullname.Name = "lblProfileFullname";
+            this.lblProfileFullname.Size = new System.Drawing.Size(84, 22);
+            this.lblProfileFullname.TabIndex = 25;
+            this.lblProfileFullname.Text = "John Doe";
+            this.lblProfileFullname.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblProfileUsername
+            // 
+            this.lblProfileUsername.AutoSize = true;
+            this.lblProfileUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProfileUsername.Location = new System.Drawing.Point(304, 163);
+            this.lblProfileUsername.Name = "lblProfileUsername";
+            this.lblProfileUsername.Size = new System.Drawing.Size(93, 22);
+            this.lblProfileUsername.TabIndex = 26;
+            this.lblProfileUsername.Text = "johndoe69";
+            // 
+            // lblProfileAddress
+            // 
+            this.lblProfileAddress.AutoSize = true;
+            this.lblProfileAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProfileAddress.Location = new System.Drawing.Point(304, 209);
+            this.lblProfileAddress.Name = "lblProfileAddress";
+            this.lblProfileAddress.Size = new System.Drawing.Size(177, 22);
+            this.lblProfileAddress.TabIndex = 27;
+            this.lblProfileAddress.Text = "57000 Kuala Lumpur";
+            // 
+            // lblProfileRole
+            // 
+            this.lblProfileRole.AutoSize = true;
+            this.lblProfileRole.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProfileRole.Location = new System.Drawing.Point(304, 308);
+            this.lblProfileRole.Name = "lblProfileRole";
+            this.lblProfileRole.Size = new System.Drawing.Size(96, 22);
+            this.lblProfileRole.TabIndex = 28;
+            this.lblProfileRole.Text = "Technician";
+            // 
+            // lblProfileEmail
+            // 
+            this.lblProfileEmail.AutoSize = true;
+            this.lblProfileEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProfileEmail.Location = new System.Drawing.Point(304, 257);
+            this.lblProfileEmail.Name = "lblProfileEmail";
+            this.lblProfileEmail.Size = new System.Drawing.Size(148, 22);
+            this.lblProfileEmail.TabIndex = 29;
+            this.lblProfileEmail.Text = "jojof@gmail.com";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.lblProfileEmail);
+            this.Controls.Add(this.lblProfileRole);
+            this.Controls.Add(this.lblProfileAddress);
+            this.Controls.Add(this.lblProfileUsername);
+            this.Controls.Add(this.lblProfileFullname);
             this.Controls.Add(this.lblProfilePage);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnChangePassword);
@@ -245,11 +250,6 @@
             this.Controls.Add(this.btnEditAddress);
             this.Controls.Add(this.btnEditUsername);
             this.Controls.Add(this.btnEditFullname);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblUsername);
@@ -273,11 +273,6 @@
         private Label lblAddress;
         private Label lblFullname;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
         private Button btnEditFullname;
         private Button btnEditUsername;
         private Button btnEditAddress;
@@ -285,5 +280,10 @@
         private Button btnChangePassword;
         private Button btnBack;
         private Label lblProfilePage;
+        private Label lblProfileFullname;
+        private Label lblProfileUsername;
+        private Label lblProfileAddress;
+        private Label lblProfileRole;
+        private Label lblProfileEmail;
     }
 }
