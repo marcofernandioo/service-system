@@ -16,5 +16,25 @@ namespace code
         {
             InitializeComponent();
         }
+
+        private void TechnicianView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contTechnician_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
