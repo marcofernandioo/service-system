@@ -32,7 +32,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.tboxPassword = new System.Windows.Forms.TextBox();
             this.tboxUsername = new System.Windows.Forms.TextBox();
-            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -72,16 +72,16 @@
             this.tboxUsername.Size = new System.Drawing.Size(281, 30);
             this.tboxUsername.TabIndex = 9;
             // 
-            // btnProfile
+            // btnLogin
             // 
-            this.btnProfile.BackColor = System.Drawing.Color.Silver;
-            this.btnProfile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProfile.Location = new System.Drawing.Point(162, 273);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(125, 29);
-            this.btnProfile.TabIndex = 15;
-            this.btnProfile.Text = "Login";
-            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.Silver;
+            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.Location = new System.Drawing.Point(162, 273);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(125, 29);
+            this.btnLogin.TabIndex = 15;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -99,7 +99,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnProfile);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tboxUsername);
             this.Controls.Add(this.tboxPassword);
             this.Controls.Add(this.lblPassword);
@@ -117,7 +117,7 @@
         private Label lblPassword;
         private TextBox tboxPassword;
         private TextBox tboxUsername;
-        private Button btnProfile;
+        private Button btnLogin;
         private Label label1;
     }
 }
