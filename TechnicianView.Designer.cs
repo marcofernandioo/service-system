@@ -32,9 +32,15 @@
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.contTechnician = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pageRequestPool = new System.Windows.Forms.TabPage();
+            this.pageMyWorks = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.contTechnician.SuspendLayout();
+            this.pageRequestPool.SuspendLayout();
+            this.pageMyWorks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGreeting
@@ -71,8 +77,8 @@
             // 
             // contTechnician
             // 
-            this.contTechnician.Controls.Add(this.tabPage1);
-            this.contTechnician.Controls.Add(this.tabPage2);
+            this.contTechnician.Controls.Add(this.pageRequestPool);
+            this.contTechnician.Controls.Add(this.pageMyWorks);
             this.contTechnician.Font = new System.Drawing.Font("Lexend Deca", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.contTechnician.Location = new System.Drawing.Point(37, 114);
             this.contTechnician.Name = "contTechnician";
@@ -81,25 +87,47 @@
             this.contTechnician.TabIndex = 3;
             this.contTechnician.SelectedIndexChanged += new System.EventHandler(this.contTechnician_SelectedIndexChanged);
             // 
-            // tabPage1
+            // pageRequestPool
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 41);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(816, 348);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Request Pool";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.pageRequestPool.Controls.Add(this.dataGridView1);
+            this.pageRequestPool.Location = new System.Drawing.Point(4, 41);
+            this.pageRequestPool.Name = "pageRequestPool";
+            this.pageRequestPool.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.pageRequestPool.Size = new System.Drawing.Size(816, 348);
+            this.pageRequestPool.TabIndex = 0;
+            this.pageRequestPool.Text = "Request Pool";
+            this.pageRequestPool.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // pageMyWorks
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 45);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(816, 339);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "My Requests";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.pageMyWorks.Controls.Add(this.dataGridView2);
+            this.pageMyWorks.Location = new System.Drawing.Point(4, 41);
+            this.pageMyWorks.Name = "pageMyWorks";
+            this.pageMyWorks.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.pageMyWorks.Size = new System.Drawing.Size(816, 348);
+            this.pageMyWorks.TabIndex = 1;
+            this.pageMyWorks.Text = "My Works";
+            this.pageMyWorks.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 17);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 310);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(25, 16);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 29;
+            this.dataGridView2.Size = new System.Drawing.Size(773, 326);
+            this.dataGridView2.TabIndex = 0;
             // 
             // TechnicianView
             // 
@@ -116,6 +144,10 @@
             this.Text = "TechnicianView";
             this.Load += new System.EventHandler(this.TechnicianView_Load);
             this.contTechnician.ResumeLayout(false);
+            this.pageRequestPool.ResumeLayout(false);
+            this.pageMyWorks.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +159,9 @@
         private Button btnProfile;
         private Button btnLogout;
         private TabControl contTechnician;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
+        private TabPage pageRequestPool;
+        private TabPage pageMyWorks;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
     }
 }

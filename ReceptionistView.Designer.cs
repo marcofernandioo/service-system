@@ -32,7 +32,7 @@
             this.lblGreeting = new System.Windows.Forms.Label();
             this.btnProfile = new System.Windows.Forms.Button();
             this.contReceptionist = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pageCreate = new System.Windows.Forms.TabPage();
             this.btnCreateReq = new System.Windows.Forms.Button();
             this.fieldFullname = new System.Windows.Forms.TextBox();
             this.fieldEmail = new System.Windows.Forms.TextBox();
@@ -49,20 +49,21 @@
             this.lblUrgency = new System.Windows.Forms.Label();
             this.lblServiceType = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pageOngoing = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contReceptionist.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.pageCreate.SuspendLayout();
+            this.pageOngoing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogout.Location = new System.Drawing.Point(642, 51);
+            this.btnLogout.Location = new System.Drawing.Point(734, 68);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(113, 42);
+            this.btnLogout.Size = new System.Drawing.Size(129, 56);
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -72,9 +73,9 @@
             // 
             this.lblGreeting.AutoSize = true;
             this.lblGreeting.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGreeting.Location = new System.Drawing.Point(52, 41);
+            this.lblGreeting.Location = new System.Drawing.Point(59, 55);
             this.lblGreeting.Name = "lblGreeting";
-            this.lblGreeting.Size = new System.Drawing.Size(298, 25);
+            this.lblGreeting.Size = new System.Drawing.Size(374, 32);
             this.lblGreeting.TabIndex = 1;
             this.lblGreeting.Text = "Welcome, Michael Henri Muljadi!";
             this.lblGreeting.Click += new System.EventHandler(this.lblGreeting_Click);
@@ -82,98 +83,105 @@
             // btnProfile
             // 
             this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProfile.Location = new System.Drawing.Point(499, 51);
+            this.btnProfile.Location = new System.Drawing.Point(570, 68);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(112, 42);
+            this.btnProfile.Size = new System.Drawing.Size(128, 56);
             this.btnProfile.TabIndex = 2;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
             // 
             // contReceptionist
             // 
-            this.contReceptionist.Controls.Add(this.tabPage1);
-            this.contReceptionist.Controls.Add(this.tabPage2);
+            this.contReceptionist.Controls.Add(this.pageCreate);
+            this.contReceptionist.Controls.Add(this.pageOngoing);
             this.contReceptionist.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.contReceptionist.Location = new System.Drawing.Point(48, 88);
+            this.contReceptionist.Location = new System.Drawing.Point(55, 117);
+            this.contReceptionist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.contReceptionist.Name = "contReceptionist";
             this.contReceptionist.SelectedIndex = 0;
-            this.contReceptionist.Size = new System.Drawing.Size(707, 313);
+            this.contReceptionist.Size = new System.Drawing.Size(808, 417);
             this.contReceptionist.TabIndex = 3;
             this.contReceptionist.SelectedIndexChanged += new System.EventHandler(this.contReceptionist_SelectedIndexChanged);
             // 
-            // tabPage1
+            // pageCreate
             // 
-            this.tabPage1.Controls.Add(this.btnCreateReq);
-            this.tabPage1.Controls.Add(this.fieldFullname);
-            this.tabPage1.Controls.Add(this.fieldEmail);
-            this.tabPage1.Controls.Add(this.fieldAddress);
-            this.tabPage1.Controls.Add(this.lblFullname);
-            this.tabPage1.Controls.Add(this.fieldFee);
-            this.tabPage1.Controls.Add(this.lblEmail);
-            this.tabPage1.Controls.Add(this.lblAddress);
-            this.tabPage1.Controls.Add(this.lblFee);
-            this.tabPage1.Controls.Add(this.radUrgent);
-            this.tabPage1.Controls.Add(this.radNormal);
-            this.tabPage1.Controls.Add(this.fieldServiceType);
-            this.tabPage1.Controls.Add(this.fieldUsername);
-            this.tabPage1.Controls.Add(this.lblUrgency);
-            this.tabPage1.Controls.Add(this.lblServiceType);
-            this.tabPage1.Controls.Add(this.lblUsername);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(699, 280);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Create Request";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.pageCreate.Controls.Add(this.btnCreateReq);
+            this.pageCreate.Controls.Add(this.fieldFullname);
+            this.pageCreate.Controls.Add(this.fieldEmail);
+            this.pageCreate.Controls.Add(this.fieldAddress);
+            this.pageCreate.Controls.Add(this.lblFullname);
+            this.pageCreate.Controls.Add(this.fieldFee);
+            this.pageCreate.Controls.Add(this.lblEmail);
+            this.pageCreate.Controls.Add(this.lblAddress);
+            this.pageCreate.Controls.Add(this.lblFee);
+            this.pageCreate.Controls.Add(this.radUrgent);
+            this.pageCreate.Controls.Add(this.radNormal);
+            this.pageCreate.Controls.Add(this.fieldServiceType);
+            this.pageCreate.Controls.Add(this.fieldUsername);
+            this.pageCreate.Controls.Add(this.lblUrgency);
+            this.pageCreate.Controls.Add(this.lblServiceType);
+            this.pageCreate.Controls.Add(this.lblUsername);
+            this.pageCreate.Location = new System.Drawing.Point(4, 34);
+            this.pageCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageCreate.Name = "pageCreate";
+            this.pageCreate.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageCreate.Size = new System.Drawing.Size(800, 379);
+            this.pageCreate.TabIndex = 0;
+            this.pageCreate.Text = "Create Request";
+            this.pageCreate.UseVisualStyleBackColor = true;
             // 
             // btnCreateReq
             // 
             this.btnCreateReq.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCreateReq.ForeColor = System.Drawing.Color.Black;
-            this.btnCreateReq.Location = new System.Drawing.Point(18, 202);
+            this.btnCreateReq.Location = new System.Drawing.Point(21, 269);
+            this.btnCreateReq.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateReq.Name = "btnCreateReq";
-            this.btnCreateReq.Size = new System.Drawing.Size(89, 40);
+            this.btnCreateReq.Size = new System.Drawing.Size(102, 53);
             this.btnCreateReq.TabIndex = 18;
             this.btnCreateReq.Text = "Create";
             this.btnCreateReq.UseVisualStyleBackColor = false;
             // 
             // fieldFullname
             // 
-            this.fieldFullname.Location = new System.Drawing.Point(473, 116);
+            this.fieldFullname.Location = new System.Drawing.Point(541, 155);
+            this.fieldFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fieldFullname.Name = "fieldFullname";
-            this.fieldFullname.Size = new System.Drawing.Size(198, 27);
+            this.fieldFullname.Size = new System.Drawing.Size(226, 32);
             this.fieldFullname.TabIndex = 17;
             // 
             // fieldEmail
             // 
-            this.fieldEmail.Location = new System.Drawing.Point(473, 82);
+            this.fieldEmail.Location = new System.Drawing.Point(541, 109);
+            this.fieldEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fieldEmail.Name = "fieldEmail";
-            this.fieldEmail.Size = new System.Drawing.Size(198, 27);
+            this.fieldEmail.Size = new System.Drawing.Size(226, 32);
             this.fieldEmail.TabIndex = 16;
             // 
             // fieldAddress
             // 
-            this.fieldAddress.Location = new System.Drawing.Point(473, 50);
+            this.fieldAddress.Location = new System.Drawing.Point(541, 67);
+            this.fieldAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fieldAddress.Name = "fieldAddress";
-            this.fieldAddress.Size = new System.Drawing.Size(198, 27);
+            this.fieldAddress.Size = new System.Drawing.Size(226, 32);
             this.fieldAddress.TabIndex = 15;
             // 
             // lblFullname
             // 
             this.lblFullname.AutoSize = true;
-            this.lblFullname.Location = new System.Drawing.Point(381, 53);
+            this.lblFullname.Location = new System.Drawing.Point(435, 71);
             this.lblFullname.Name = "lblFullname";
-            this.lblFullname.Size = new System.Drawing.Size(76, 20);
+            this.lblFullname.Size = new System.Drawing.Size(97, 25);
             this.lblFullname.TabIndex = 14;
             this.lblFullname.Text = "Full Name";
             // 
             // fieldFee
             // 
             this.fieldFee.AutoSize = true;
-            this.fieldFee.Location = new System.Drawing.Point(125, 155);
+            this.fieldFee.Location = new System.Drawing.Point(143, 207);
             this.fieldFee.Name = "fieldFee";
-            this.fieldFee.Size = new System.Drawing.Size(54, 20);
+            this.fieldFee.Size = new System.Drawing.Size(69, 25);
             this.fieldFee.TabIndex = 11;
             this.fieldFee.Text = "RM. 90";
             this.fieldFee.Click += new System.EventHandler(this.label1_Click);
@@ -181,36 +189,37 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(381, 120);
+            this.lblEmail.Location = new System.Drawing.Point(435, 160);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(46, 20);
+            this.lblEmail.Size = new System.Drawing.Size(58, 25);
             this.lblEmail.TabIndex = 13;
             this.lblEmail.Text = "Email";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(381, 86);
+            this.lblAddress.Location = new System.Drawing.Point(435, 115);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(62, 20);
+            this.lblAddress.Size = new System.Drawing.Size(79, 25);
             this.lblAddress.TabIndex = 12;
             this.lblAddress.Text = "Address";
             // 
             // lblFee
             // 
             this.lblFee.AutoSize = true;
-            this.lblFee.Location = new System.Drawing.Point(16, 155);
+            this.lblFee.Location = new System.Drawing.Point(18, 207);
             this.lblFee.Name = "lblFee";
-            this.lblFee.Size = new System.Drawing.Size(32, 20);
+            this.lblFee.Size = new System.Drawing.Size(41, 25);
             this.lblFee.TabIndex = 12;
             this.lblFee.Text = "Fee";
             // 
             // radUrgent
             // 
             this.radUrgent.AutoSize = true;
-            this.radUrgent.Location = new System.Drawing.Point(208, 118);
+            this.radUrgent.Location = new System.Drawing.Point(238, 157);
+            this.radUrgent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radUrgent.Name = "radUrgent";
-            this.radUrgent.Size = new System.Drawing.Size(72, 24);
+            this.radUrgent.Size = new System.Drawing.Size(91, 29);
             this.radUrgent.TabIndex = 10;
             this.radUrgent.TabStop = true;
             this.radUrgent.Text = "Urgent";
@@ -220,9 +229,10 @@
             // radNormal
             // 
             this.radNormal.AutoSize = true;
-            this.radNormal.Location = new System.Drawing.Point(125, 118);
+            this.radNormal.Location = new System.Drawing.Point(143, 157);
+            this.radNormal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radNormal.Name = "radNormal";
-            this.radNormal.Size = new System.Drawing.Size(77, 24);
+            this.radNormal.Size = new System.Drawing.Size(96, 29);
             this.radNormal.TabIndex = 9;
             this.radNormal.TabStop = true;
             this.radNormal.Text = "Normal";
@@ -240,82 +250,88 @@
             "OS Format & Installation ",
             "Data Backup & Recovery ",
             "Internet Connectivity Issues "});
-            this.fieldServiceType.Location = new System.Drawing.Point(126, 83);
+            this.fieldServiceType.Location = new System.Drawing.Point(144, 111);
+            this.fieldServiceType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fieldServiceType.Name = "fieldServiceType";
-            this.fieldServiceType.Size = new System.Drawing.Size(232, 28);
+            this.fieldServiceType.Size = new System.Drawing.Size(265, 33);
             this.fieldServiceType.TabIndex = 8;
             this.fieldServiceType.SelectedIndexChanged += new System.EventHandler(this.fieldServiceType_SelectedIndexChanged);
             // 
             // fieldUsername
             // 
-            this.fieldUsername.Location = new System.Drawing.Point(125, 47);
+            this.fieldUsername.Location = new System.Drawing.Point(143, 63);
+            this.fieldUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fieldUsername.Name = "fieldUsername";
-            this.fieldUsername.Size = new System.Drawing.Size(233, 27);
+            this.fieldUsername.Size = new System.Drawing.Size(266, 32);
             this.fieldUsername.TabIndex = 7;
             // 
             // lblUrgency
             // 
             this.lblUrgency.AutoSize = true;
-            this.lblUrgency.Location = new System.Drawing.Point(16, 119);
+            this.lblUrgency.Location = new System.Drawing.Point(18, 159);
             this.lblUrgency.Name = "lblUrgency";
-            this.lblUrgency.Size = new System.Drawing.Size(63, 20);
+            this.lblUrgency.Size = new System.Drawing.Size(82, 25);
             this.lblUrgency.TabIndex = 6;
             this.lblUrgency.Text = "Urgency";
             // 
             // lblServiceType
             // 
             this.lblServiceType.AutoSize = true;
-            this.lblServiceType.Location = new System.Drawing.Point(16, 85);
+            this.lblServiceType.Location = new System.Drawing.Point(18, 113);
             this.lblServiceType.Name = "lblServiceType";
-            this.lblServiceType.Size = new System.Drawing.Size(91, 20);
+            this.lblServiceType.Size = new System.Drawing.Size(116, 25);
             this.lblServiceType.TabIndex = 5;
             this.lblServiceType.Text = "Service Type";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(16, 50);
+            this.lblUsername.Location = new System.Drawing.Point(18, 67);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(75, 20);
+            this.lblUsername.Size = new System.Drawing.Size(97, 25);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
             // 
-            // tabPage2
+            // pageOngoing
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(699, 280);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Ongoing Requests";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.pageOngoing.Controls.Add(this.dataGridView1);
+            this.pageOngoing.Location = new System.Drawing.Point(4, 34);
+            this.pageOngoing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageOngoing.Name = "pageOngoing";
+            this.pageOngoing.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageOngoing.Size = new System.Drawing.Size(800, 379);
+            this.pageOngoing.TabIndex = 1;
+            this.pageOngoing.Text = "Ongoing Requests";
+            this.pageOngoing.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 21);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 28);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(648, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(741, 309);
             this.dataGridView1.TabIndex = 19;
             // 
             // ReceptionistView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.contReceptionist);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.lblGreeting);
             this.Controls.Add(this.btnLogout);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ReceptionistView";
             this.Text = "ReceptionistView";
             this.Load += new System.EventHandler(this.ReceptionistView_Load);
             this.contReceptionist.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.pageCreate.ResumeLayout(false);
+            this.pageCreate.PerformLayout();
+            this.pageOngoing.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -328,8 +344,8 @@
         private Label lblGreeting;
         private Button btnProfile;
         private TabControl contReceptionist;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
+        private TabPage pageCreate;
+        private TabPage pageOngoing;
         private Label fieldFee;
         private RadioButton radUrgent;
         private RadioButton radNormal;
