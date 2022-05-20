@@ -1,34 +1,24 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj": {}
+    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Group Project\\code.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj": {
+    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Group Project\\code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj",
+        "projectUniqueName": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Group Project\\code.csproj",
         "projectName": "code",
-        "projectPath": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj",
-        "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\obj\\",
-=======
-    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj",
-        "projectName": "code",
-        "projectPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\code.csproj",
+        "projectPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Group Project\\code.csproj",
         "packagesPath": "C:\\Users\\Vinsont\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Project\\obj\\",
->>>>>>> d94aba464e92ee2e183fe8fc2c60e8f57560976e
+        "outputPath": "C:\\Users\\Vinsont\\Desktop\\University\\Semester 2\\IOOP\\Group Assignment\\Group Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vinsont\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

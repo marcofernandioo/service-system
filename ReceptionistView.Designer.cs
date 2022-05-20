@@ -51,6 +51,11 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.pageOngoing = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.columnRequestID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnRequestUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnRequestServiceType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnRequestServiceFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnServiceStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contReceptionist.SuspendLayout();
             this.pageCreate.SuspendLayout();
             this.pageOngoing.SuspendLayout();
@@ -295,6 +300,7 @@
             // pageOngoing
             // 
             this.pageOngoing.Controls.Add(this.dataGridView1);
+            this.pageOngoing.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pageOngoing.Location = new System.Drawing.Point(4, 34);
             this.pageOngoing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pageOngoing.Name = "pageOngoing";
@@ -307,6 +313,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnRequestID,
+            this.columnRequestUsername,
+            this.columnRequestServiceType,
+            this.columnRequestServiceFee,
+            this.columnServiceStatus});
             this.dataGridView1.Location = new System.Drawing.Point(33, 28);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
@@ -314,6 +326,41 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(741, 309);
             this.dataGridView1.TabIndex = 19;
+            // 
+            // columnRequestID
+            // 
+            this.columnRequestID.HeaderText = "RequestID";
+            this.columnRequestID.MinimumWidth = 6;
+            this.columnRequestID.Name = "columnRequestID";
+            this.columnRequestID.Width = 125;
+            // 
+            // columnRequestUsername
+            // 
+            this.columnRequestUsername.HeaderText = "Username";
+            this.columnRequestUsername.MinimumWidth = 6;
+            this.columnRequestUsername.Name = "columnRequestUsername";
+            this.columnRequestUsername.Width = 125;
+            // 
+            // columnRequestServiceType
+            // 
+            this.columnRequestServiceType.HeaderText = "ServiceT Type";
+            this.columnRequestServiceType.MinimumWidth = 6;
+            this.columnRequestServiceType.Name = "columnRequestServiceType";
+            this.columnRequestServiceType.Width = 180;
+            // 
+            // columnRequestServiceFee
+            // 
+            this.columnRequestServiceFee.HeaderText = "Service Fee";
+            this.columnRequestServiceFee.MinimumWidth = 6;
+            this.columnRequestServiceFee.Name = "columnRequestServiceFee";
+            this.columnRequestServiceFee.Width = 125;
+            // 
+            // columnServiceStatus
+            // 
+            this.columnServiceStatus.HeaderText = "Service Status";
+            this.columnServiceStatus.MinimumWidth = 6;
+            this.columnServiceStatus.Name = "columnServiceStatus";
+            this.columnServiceStatus.Width = 180;
             // 
             // ReceptionistView
             // 
@@ -363,5 +410,10 @@
         private TextBox fieldEmail;
         private TextBox fieldAddress;
         private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn columnRequestID;
+        private DataGridViewTextBoxColumn columnRequestUsername;
+        private DataGridViewTextBoxColumn columnRequestServiceType;
+        private DataGridViewTextBoxColumn columnRequestServiceFee;
+        private DataGridViewTextBoxColumn columnServiceStatus;
     }
 }

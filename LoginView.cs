@@ -16,5 +16,10 @@ namespace code
         {
             InitializeComponent();
         }
+
+        private void LoginView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
