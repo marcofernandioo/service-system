@@ -69,3 +69,36 @@ C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Group Proje
 C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Group Project\obj\Debug\net6.0-windows\code.pdb
 C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Group Project\obj\Debug\net6.0-windows\code.genruntimeconfig.cache
 C:\Users\Vinsont\Desktop\University\Semester 2\IOOP\Group Assignment\Group Project\obj\Debug\net6.0-windows\ref\code.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\code.exe
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\code.deps.json
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\code.runtimeconfig.json
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\code.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\code.pdb
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\Dapper.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\_University\IOOP\_Assignment\code\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.csproj.AssemblyReference.cache
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.ChangePassword.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.CustomerView.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.LoginView.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.LogoutConfirmation.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.ManagerView.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.Form1.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.Properties.Resources.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.ReceptionistView.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.TechnicianView.resources
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.csproj.GenerateResource.cache
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.GeneratedMSBuildEditorConfig.editorconfig
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.AssemblyInfoInputs.cache
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.AssemblyInfo.cs
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.csproj.CoreCompileInputs.cache
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.csproj.CopyComplete
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.dll
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\refint\code.dll
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.pdb
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.genruntimeconfig.cache
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\ref\code.dll
