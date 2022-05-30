@@ -9,7 +9,9 @@ namespace code
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            ReceptionistView rv = new ReceptionistView();
+            rv.Show();
+            this.Visible = false;
         }
 
         private void label5_Click(object sender, EventArgs e)
