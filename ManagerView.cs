@@ -12,9 +12,11 @@ namespace code
 {
     public partial class ManagerView : Form
     {
-        public ManagerView()
+        public static User _user;
+        public ManagerView(User user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace code
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            ProfileView pv = new ProfileView();
+            ProfileView pv = new ProfileView(_user);
             pv.Show();
             this.Visible = false;
         }

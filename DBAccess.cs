@@ -51,12 +51,12 @@ namespace code
                 return "";
             }
         }
-        public void CreateDummyUser(string username, string password, string dob, string email, string addr, string role)
+        public void CreateDummyUser(string fullname, string username, string password, string dob, string email, string addr, string role)
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
                 string _id = GetLastPKfromRequestsTable();
-                conn.Execute($"INSERT INTO Users VALUES ('{_id}', '{username}', '{password}', '{dob}', '{email}', '{addr}', '{role}')");
+                conn.Execute($"INSERT INTO Users VALUES ('{_id}', '{fullname}', '{username}', '{password}', '{dob}', '{email}', '{addr}', '{role}')");
             }
         }
     }

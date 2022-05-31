@@ -12,9 +12,11 @@ namespace code
 {
     public partial class TechnicianView : Form
     {
-        public TechnicianView()
+        public static User _user;
+        public TechnicianView(User user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void TechnicianView_Load(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace code
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            ProfileView pv = new ProfileView();
+            ProfileView pv = new ProfileView(_user);
             pv.Show();
             this.Visible = false;
         }

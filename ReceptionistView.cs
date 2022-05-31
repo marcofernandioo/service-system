@@ -14,11 +14,13 @@ namespace code
     public partial class ReceptionistView : Form
     {
         List<Request> requests = new List<Request>();
-        public ReceptionistView()
+        public static User _user;
+        public ReceptionistView(User user)
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = true;
-        }
+            _user = user;
+    }
 
         private void ReceptionistView_Load(object sender, EventArgs e)
         {
@@ -65,7 +67,7 @@ namespace code
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            ProfileView pv = new ProfileView();
+            ProfileView pv = new ProfileView(_user);
             pv.Show();
             this.Visible = false;
         }

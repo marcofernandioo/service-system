@@ -12,16 +12,20 @@ namespace code
 {
     public partial class CustomerView : Form
     {
-        public CustomerView()
+        public static CustomerView instance;
+        public static User _user;
+        public CustomerView(User user)
         {
             InitializeComponent();
+            _user = user;
+            MessageBox.Show(user.role, user.username);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            ProfileView pv = new ProfileView();
-            pv.Show();
-            this.Visible = false;
+            Navigation nav = new Navigation();
+            nav.DisplayProfileView(_user);
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
