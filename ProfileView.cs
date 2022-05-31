@@ -1,17 +1,15 @@
 namespace code
 {
-    public partial class Form1 : Form
+    public partial class ProfileView : Form
     {
-        public Form1()
+        public ProfileView()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ReceptionistView rv = new ReceptionistView();
-            rv.Show();
-            this.Visible = false;
+            
         }
 
         private void label5_Click(object sender, EventArgs e)

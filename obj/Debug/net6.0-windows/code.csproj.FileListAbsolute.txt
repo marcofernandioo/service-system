@@ -87,7 +87,6 @@ D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.CustomerView.
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.LoginView.resources
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.LogoutConfirmation.resources
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.ManagerView.resources
-D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.Form1.resources
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.Properties.Resources.resources
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.ReceptionistView.resources
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.TechnicianView.resources
@@ -102,3 +101,4 @@ D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\refint\code.dll
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.pdb
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.genruntimeconfig.cache
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\ref\code.dll
+D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.ProfileView.resources
