@@ -22,9 +22,9 @@ namespace code
 
         private void ReceptionistView_Load(object sender, EventArgs e)
         {
-            DBAccess db = new DBAccess();
-            requests = db.GetAllRequests();
-            dataGridView1.DataSource = requests;
+            //DBAccess db = new DBAccess();
+            //requests = db.GetAllRequests();
+            //dataGridView1.DataSource = requests;
             //var bindingList = new BindingList<Request>(requests);
             //BindingList<Request> view = new BindingList<Request>(requests);
             /*
@@ -41,10 +41,7 @@ namespace code
 
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -64,6 +61,19 @@ namespace code
         private void radUrgent_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ProfileView pv = new ProfileView();
+            pv.Show();
+            this.Visible = false;
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LogoutConfirmation lc = new LogoutConfirmation();
+            lc.Show();
+            this.Visible = false;
         }
     }
 }
