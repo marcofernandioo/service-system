@@ -1,0 +1,19 @@
+[33m68403bd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Added navigations functionalities and added User class
+[33m1b6f8b5[m Merge pull request #2 from marcofernandioo/db-connection
+[33md68988c[m[33m ([m[1;31morigin/db-connection[m[33m)[m Added navigations functionalities, boilerplate for db Get query, and initial load form is LoginView.
+[33mb1784cc[m Merge pull request #1 from marcofernandioo/db-connection
+[33m516c37d[m Added database connection functionality
+[33m4028d46[m Reception Table
+[33md341aa9[m added Change password form
+[33m8ccfe5c[m added Change Password Form
+[33md94aba4[m Login View
+[33mddec307[m LOGIN view
+[33mdb757bc[m Profile view update
+[33m3992dff[m minor changes on Receptionist and Technician
+[33me1966c6[m added Technician View
+[33md3354c8[m Profile page view
+[33mc73b034[m Manager View
+[33m4f41afa[m Manager view 1
+[33mebb5ff7[m Added Receptionist components
+[33m8594f1d[m Added other Views
+[33mfa708a4[m Initialized project

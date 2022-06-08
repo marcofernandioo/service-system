@@ -10,7 +10,7 @@ namespace code
 {
     public class DBAccess
     {
-        string connectionString = "Data Source=DESKTOP-LJOO6HO\\SQLEXPRESS;Initial Catalog=ServiceSystem;Integrated Security=True;";
+        string connectionString = "Data Source=ZEPHYRUSG14\\SQLEXPRESS;Initial Catalog=ServiceSystem;Integrated Security=True;";
         public List<Request> GetAllRequests()
         {
             using(IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
@@ -18,29 +18,47 @@ namespace code
                 return conn.Query<Request>("SELECT * FROM Request").ToList();
             }
         }
-        public List<Request> GetTechnicianFixingRequests(string username)
+        public List<Request> GetTechnicianFixingRequests(string username)//cant
         {
-            throw new NotImplementedException();
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<Request>($"SELECT * FROM Requests where Username='{username}' AND Status='Fixing'").ToList();
+            }
         }
         public List<Request> GetPendingRequests()
         {
-            throw new NotImplementedException();
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<Request>("SELECT * FROM Requests where RequestID=(Select RequestID From Requests where Status='Pending') ").ToList();
+            }
         }
-        public List<Request> GetCustomerOngoingRequests(string username)
+        public List<Request> GetCustomerOngoingRequests(string username)//cant
         {
-            throw new NotImplementedException();
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<Request>($"SELECT * FROM Requests WHERE Username='{username}' AND NOT Status='Unpaid' AND NOT Status='Done'").ToList();
+            }
         }
-        public List<Request> GetCustomerRequestHistory(string username)
+        public List<Request> GetCustomerRequestHistory(string username)//cant
         {
-            throw new NotImplementedException();
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<Request>($"SELECT * FROM Requests where Username='{username}' AND RequestID=(Select RequestID From Requests where Status='Done')").ToList();
+            }
         }
         public List<Request> GetAllOngoingRequests()
         {
-            throw new NotImplementedException();
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<Request>("SELECT * FROM Requests WHERE NOT Status='Unpaid' AND NOT Status='Done'").ToList();
+            }
         }
         public List<Request> GetAllDoneRequests()
         {
-            throw new NotImplementedException();
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<Request>("SELECT * FROM Requests where RequestID=(Select RequestID From Requests where Status='Done')").ToList();
+            }
         }
         public string GetLastPKfromRequestsTable()
         {

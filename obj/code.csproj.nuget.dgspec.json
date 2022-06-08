@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_University\\IOOP\\_Assignment\\code\\code.csproj": {}
+    "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj": {}
   },
   "projects": {
-    "D:\\_University\\IOOP\\_Assignment\\code\\code.csproj": {
+    "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_University\\IOOP\\_Assignment\\code\\code.csproj",
+        "projectUniqueName": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj",
         "projectName": "code",
-        "projectPath": "D:\\_University\\IOOP\\_Assignment\\code\\code.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\_University\\IOOP\\_Assignment\\code\\obj\\",
+        "projectPath": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\code.csproj",
+        "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micha\\Source\\Repos\\MiXouT\\service-system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

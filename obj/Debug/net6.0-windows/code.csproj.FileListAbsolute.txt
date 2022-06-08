@@ -5,7 +5,6 @@ C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\code.
 C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\code.pdb
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.csproj.AssemblyReference.cache
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.CustomerView.resources
-C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.Form1.resources
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.ManagerView.resources
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.ReceptionistView.resources
 C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.TechnicianView.resources
@@ -102,3 +101,14 @@ D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.pdb
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.genruntimeconfig.cache
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\ref\code.dll
 D:\_University\IOOP\_Assignment\code\obj\Debug\net6.0-windows\code.ProfileView.resources
+C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\Dapper.dll
+C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\micha\Source\Repos\MiXouT\service-system\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.ChangePassword.resources
+C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.LoginView.resources
+C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.ProfileView.resources
+C:\Users\micha\Source\Repos\MiXouT\service-system\obj\Debug\net6.0-windows\code.csproj.CopyComplete
