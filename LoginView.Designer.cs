@@ -40,10 +40,9 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUsername.Location = new System.Drawing.Point(405, 336);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lblUsername.Location = new System.Drawing.Point(162, 140);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(229, 55);
+            this.lblUsername.Size = new System.Drawing.Size(94, 22);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username:";
             // 
@@ -51,39 +50,36 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPassword.Location = new System.Drawing.Point(405, 490);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lblPassword.Location = new System.Drawing.Point(162, 204);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(220, 55);
+            this.lblPassword.Size = new System.Drawing.Size(94, 22);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password:";
             // 
             // tboxPassword
             // 
             this.tboxPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tboxPassword.Location = new System.Drawing.Point(690, 470);
-            this.tboxPassword.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tboxPassword.Location = new System.Drawing.Point(276, 196);
             this.tboxPassword.Name = "tboxPassword";
-            this.tboxPassword.Size = new System.Drawing.Size(696, 63);
+            this.tboxPassword.Size = new System.Drawing.Size(281, 30);
             this.tboxPassword.TabIndex = 8;
             // 
             // tboxUsername
             // 
             this.tboxUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tboxUsername.Location = new System.Drawing.Point(690, 317);
-            this.tboxUsername.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.tboxUsername.Location = new System.Drawing.Point(276, 132);
             this.tboxUsername.Name = "tboxUsername";
-            this.tboxUsername.Size = new System.Drawing.Size(696, 63);
+            this.tboxUsername.Size = new System.Drawing.Size(281, 30);
             this.tboxUsername.TabIndex = 9;
+            this.tboxUsername.TextChanged += new System.EventHandler(this.tboxUsername_TextChanged);
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Silver;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin.Location = new System.Drawing.Point(405, 655);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnLogin.Location = new System.Drawing.Point(162, 273);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(312, 70);
+            this.btnLogin.Size = new System.Drawing.Size(125, 29);
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -93,25 +89,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(298, 130);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label1.Location = new System.Drawing.Point(119, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1235, 74);
+            this.label1.Size = new System.Drawing.Size(527, 33);
             this.label1.TabIndex = 16;
             this.label1.Text = "WELCOME TO LAPTOP REPAIR SERVICE";
             // 
             // LoginView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2000, 1080);
+            this.ClientSize = new System.Drawing.Size(770, 440);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tboxUsername);
             this.Controls.Add(this.tboxPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "LoginView";
             this.Text = "LoginView";
             this.Load += new System.EventHandler(this.LoginView_Load);
