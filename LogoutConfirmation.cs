@@ -12,7 +12,7 @@ namespace code
 {
     public partial class LogoutConfirmation : Form
     {
-        public LogoutConfirmation()
+        public LogoutConfirmation(User _user)
         {
             InitializeComponent();
         }

@@ -38,7 +38,7 @@ namespace code
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LogoutConfirmation lc = new LogoutConfirmation();
+            LogoutConfirmation lc = new LogoutConfirmation(_user);
             lc.Show();
             this.Visible = false;
         }
