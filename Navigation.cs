@@ -34,5 +34,10 @@ namespace code
             ProfileView view = new ProfileView(user);
             view.Show();
         }
+        public void DisplayChangePassword(User user)
+        {
+            ChangePassword view = new ChangePassword(user);
+            view.Show();
+        }
     }
 }

@@ -12,12 +12,16 @@ namespace code
 {
     public partial class CustomerView : Form
     {
+        List<Request> current = new List<Request> ();
+        List<Request> history = new List<Request> ();
         public static CustomerView instance;
         public static User _user;
         public CustomerView(User user)
         {
             InitializeComponent();
             _user = user;
+            DGVcurrent.AutoGenerateColumns = true;
+            DGVhistory.AutoGenerateColumns = true;
             // MessageBox.Show(user.role, user.username);
         }
 
@@ -25,14 +29,20 @@ namespace code
         {
             Navigation nav = new Navigation();
             nav.DisplayProfileView(_user);
-            this.Hide();
+            this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LogoutConfirmation lc = new LogoutConfirmation(_user);
             lc.Show();
-            this.Visible = false;
+        }
+
+        private void CustomerView_Load(object sender, EventArgs e)
+        {
+            DBAccess db = new DBAccess();
+            history = db.GetCustomerRequestHistory(_user.username);
+            DGVhistory.DataSource = history;
         }
     }
 }

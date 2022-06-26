@@ -24,7 +24,7 @@ namespace code
 
         private void lblYes_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
     }
 }

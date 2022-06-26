@@ -49,20 +49,18 @@ namespace code
             }
         }
 
-       
-
-        public List<Request> GetTechnicianFixingRequests(string username)//cant
+        public List<Request> GetTechnicianFixingRequests(string username)
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                return conn.Query<Request>($"SELECT * FROM Requests where Username='{username}' AND Status='Fixing'").ToList();
+                return conn.Query<Request>($"SELECT * FROM Requests WHERE Status = 'Fixing' AND TechnicianID = (SELECT UserID FROM Users WHERE Users.Username = '{username}');").ToList();
             }
         }
         public List<Request> GetPendingRequests()
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                return conn.Query<Request>("SELECT * FROM Requests where RequestID=(Select RequestID From Requests where Status='Pending') ").ToList();
+                return conn.Query<Request>("SELECT * FROM Requests WHERE Status = 'Pending';").ToList();
             }
         }
         public List<Request> GetCustomerOngoingRequests(string username)//cant
@@ -72,11 +70,11 @@ namespace code
                 return conn.Query<Request>($"SELECT * FROM Requests WHERE Username='{username}' AND NOT Status='Unpaid' AND NOT Status='Done'").ToList();
             }
         }
-        public List<Request> GetCustomerRequestHistory(string username)//cant
+        public List<Request> GetCustomerRequestHistory(string username)
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                return conn.Query<Request>($"SELECT * FROM Requests where Username='{username}' AND RequestID=(Select RequestID From Requests where Status='Done')").ToList();
+                return conn.Query<Request>($"SELECT * FROM Requests where Status = 'Done' AND CustomerID = (SELECT UserID FROM Users WHERE Username = '{username}'); ").ToList();
             }
         }
         public List<Request> GetAllOngoingRequests()
@@ -86,11 +84,11 @@ namespace code
                 return conn.Query<Request>("SELECT * FROM Requests WHERE NOT Status='Unpaid' AND NOT Status='Done'").ToList();
             }
         }
-        public List<Request> GetAllDoneRequests()
+        public List<Request> GetAllDoneRequestsFromRange(string start, string end)
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                return conn.Query<Request>("SELECT * FROM Requests where RequestID=(Select RequestID From Requests where Status='Done')").ToList();
+                return conn.Query<Request>($"SELECT * FROM Requests where DatePaid > '{start}' AND DatePaid < '{end}';").ToList();
             }
         }
         public string GetLastPKfromRequestsTable()
@@ -108,6 +106,14 @@ namespace code
             {
                 string _id = GetLastPKfromRequestsTable();
                 conn.Execute($"INSERT INTO Users VALUES ('{_id}', '{fullname}', '{username}', '{password}', '{dob}', '{email}', '{addr}', '{role}')");
+            }
+        }
+        public void UpdateUserData(User user)
+        {
+            int uid = user.UserID;
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                conn.Execute($"UPDATE Users SET fullname = '{user.fullname}', username = '{user.username}', password = '{user.password}', email = '{user.email}', address = '{user.address}' WHERE UserID = {uid};");
             }
         }
     }

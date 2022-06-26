@@ -44,16 +44,13 @@
             this.lblFullname = new System.Windows.Forms.Label();
             this.pageReport = new System.Windows.Forms.TabPage();
             this.dbReport = new System.Windows.Forms.DataGridView();
-            this.columnReportMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnReportTotalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnReportRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnReportCust = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fieldEndDate = new System.Windows.Forms.TextBox();
             this.fieldStartDate = new System.Windows.Forms.TextBox();
             this.lblStart = new System.Windows.Forms.Label();
             this.lblEnd = new System.Windows.Forms.Label();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.pageRegisterStaff.SuspendLayout();
             this.pageReport.SuspendLayout();
@@ -225,6 +222,7 @@
             // 
             // pageReport
             // 
+            this.pageReport.Controls.Add(this.btnGenerateReport);
             this.pageReport.Controls.Add(this.dbReport);
             this.pageReport.Controls.Add(this.fieldEndDate);
             this.pageReport.Controls.Add(this.fieldStartDate);
@@ -243,12 +241,7 @@
             // dbReport
             // 
             this.dbReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnReportMonth,
-            this.columnReportTotalCost,
-            this.columnReportRequest,
-            this.columnReportCust});
-            this.dbReport.Location = new System.Drawing.Point(82, 182);
+            this.dbReport.Location = new System.Drawing.Point(82, 259);
             this.dbReport.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dbReport.Name = "dbReport";
             this.dbReport.RowHeadersWidth = 51;
@@ -257,38 +250,10 @@
             this.dbReport.TabIndex = 10;
             this.dbReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // columnReportMonth
-            // 
-            this.columnReportMonth.HeaderText = "Month";
-            this.columnReportMonth.MinimumWidth = 6;
-            this.columnReportMonth.Name = "columnReportMonth";
-            this.columnReportMonth.Width = 125;
-            // 
-            // columnReportTotalCost
-            // 
-            this.columnReportTotalCost.HeaderText = "Total Cost";
-            this.columnReportTotalCost.MinimumWidth = 6;
-            this.columnReportTotalCost.Name = "columnReportTotalCost";
-            this.columnReportTotalCost.Width = 125;
-            // 
-            // columnReportRequest
-            // 
-            this.columnReportRequest.HeaderText = "Request";
-            this.columnReportRequest.MinimumWidth = 6;
-            this.columnReportRequest.Name = "columnReportRequest";
-            this.columnReportRequest.Width = 125;
-            // 
-            // columnReportCust
-            // 
-            this.columnReportCust.HeaderText = "Cust";
-            this.columnReportCust.MinimumWidth = 6;
-            this.columnReportCust.Name = "columnReportCust";
-            this.columnReportCust.Width = 125;
-            // 
             // fieldEndDate
             // 
             this.fieldEndDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fieldEndDate.Location = new System.Drawing.Point(1185, 58);
+            this.fieldEndDate.Location = new System.Drawing.Point(1180, 77);
             this.fieldEndDate.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.fieldEndDate.Name = "fieldEndDate";
             this.fieldEndDate.Size = new System.Drawing.Size(472, 63);
@@ -297,7 +262,7 @@
             // fieldStartDate
             // 
             this.fieldStartDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fieldStartDate.Location = new System.Drawing.Point(320, 58);
+            this.fieldStartDate.Location = new System.Drawing.Point(326, 77);
             this.fieldStartDate.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.fieldStartDate.Name = "fieldStartDate";
             this.fieldStartDate.Size = new System.Drawing.Size(472, 63);
@@ -351,6 +316,19 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.BackColor = System.Drawing.Color.Silver;
+            this.btnGenerateReport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGenerateReport.Location = new System.Drawing.Point(82, 165);
+            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(479, 70);
+            this.btnGenerateReport.TabIndex = 16;
+            this.btnGenerateReport.Text = "Generate Report";
+            this.btnGenerateReport.UseVisualStyleBackColor = false;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            // 
             // ManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
@@ -363,6 +341,7 @@
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "ManagerView";
             this.Text = "ManagerView";
+            this.Load += new System.EventHandler(this.ManagerView_Load);
             this.tabControl1.ResumeLayout(false);
             this.pageRegisterStaff.ResumeLayout(false);
             this.pageRegisterStaff.PerformLayout();
@@ -398,9 +377,6 @@
         private Label lblStart;
         private Label lblEnd;
         private DataGridView dbReport;
-        private DataGridViewTextBoxColumn columnReportMonth;
-        private DataGridViewTextBoxColumn columnReportTotalCost;
-        private DataGridViewTextBoxColumn columnReportRequest;
-        private DataGridViewTextBoxColumn columnReportCust;
+        private Button btnGenerateReport;
     }
 }

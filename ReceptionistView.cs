@@ -29,15 +29,6 @@ namespace code
             DBAccess db = new DBAccess();
             users = db.GetAllUsers();
             dataGridView1.DataSource = users;
-            /*
-            var bindingList = new BindingList<Request>(requests);
-            BindingList<Request> view = new BindingList<Request>(requests);
-            
-            List<MyObject> objects = new List<MyObject>();
-            objects.Add(new MyObject(1, "A"));
-            objects.Add(new MyObject(2, "B"));
-            dataGridView1.DataSource = objects;
-            */
             
         }
         private void fieldUsername_TextChanged(object sender, EventArgs e)
@@ -89,13 +80,12 @@ namespace code
         {
             ProfileView pv = new ProfileView(_user);
             pv.Show();
-            this.Visible = false;
+            this.Close();
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LogoutConfirmation lc = new LogoutConfirmation(_user);
             lc.Show();
-            this.Visible = false;
         }
     }
 }

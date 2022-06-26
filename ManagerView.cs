@@ -12,6 +12,7 @@ namespace code
 {
     public partial class ManagerView : Form
     {
+        List<Request> requestRange = new List<Request>();
         public static User _user;
         public ManagerView(User user)
         {
@@ -33,14 +34,25 @@ namespace code
         {
             ProfileView pv = new ProfileView(_user);
             pv.Show();
-            this.Visible = false;
+            this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LogoutConfirmation lc = new LogoutConfirmation(_user);
             lc.Show();
-            this.Visible = false;
+        }
+
+        private void ManagerView_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            DBAccess db = new DBAccess();
+            requestRange = db.GetAllDoneRequestsFromRange(fieldStartDate.Text, fieldEndDate.Text);
+            dbReport.DataSource = requestRange;
         }
     }
 }

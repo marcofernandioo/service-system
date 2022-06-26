@@ -36,7 +36,7 @@ namespace code
                 MessageBox.Show("Wrong Password");
                 return null;
             }
-            User user = new User(tempUser.username, tempUser.password, tempUser.role);
+            User user = new User(tempUser.UserID, tempUser.fullname, tempUser.username, tempUser.password, tempUser.birthdate, tempUser.email, tempUser.address, tempUser.role);
             return user;
             
         }

@@ -34,18 +34,15 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblFullname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnEditFullname = new System.Windows.Forms.Button();
-            this.btnEditUsername = new System.Windows.Forms.Button();
-            this.btnEditAddress = new System.Windows.Forms.Button();
-            this.btnEditEmail = new System.Windows.Forms.Button();
+            this.btnChangeData = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblProfilePage = new System.Windows.Forms.Label();
-            this.lblProfileFullname = new System.Windows.Forms.Label();
-            this.lblProfileUsername = new System.Windows.Forms.Label();
-            this.lblProfileAddress = new System.Windows.Forms.Label();
             this.lblProfileRole = new System.Windows.Forms.Label();
-            this.lblProfileEmail = new System.Windows.Forms.Label();
+            this.fieldFullname = new System.Windows.Forms.TextBox();
+            this.fieldUsername = new System.Windows.Forms.TextBox();
+            this.fieldAddress = new System.Windows.Forms.TextBox();
+            this.fieldEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -112,71 +109,37 @@
             this.label1.Size = new System.Drawing.Size(0, 48);
             this.label1.TabIndex = 12;
             // 
-            // btnEditFullname
+            // btnChangeData
             // 
-            this.btnEditFullname.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEditFullname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditFullname.Location = new System.Drawing.Point(1428, 264);
-            this.btnEditFullname.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnEditFullname.Name = "btnEditFullname";
-            this.btnEditFullname.Size = new System.Drawing.Size(235, 70);
-            this.btnEditFullname.TabIndex = 18;
-            this.btnEditFullname.Text = "Edit";
-            this.btnEditFullname.UseVisualStyleBackColor = false;
-            // 
-            // btnEditUsername
-            // 
-            this.btnEditUsername.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEditUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditUsername.Location = new System.Drawing.Point(1428, 372);
-            this.btnEditUsername.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnEditUsername.Name = "btnEditUsername";
-            this.btnEditUsername.Size = new System.Drawing.Size(235, 70);
-            this.btnEditUsername.TabIndex = 19;
-            this.btnEditUsername.Text = "Edit";
-            this.btnEditUsername.UseVisualStyleBackColor = false;
-            // 
-            // btnEditAddress
-            // 
-            this.btnEditAddress.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEditAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditAddress.Location = new System.Drawing.Point(1428, 485);
-            this.btnEditAddress.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnEditAddress.Name = "btnEditAddress";
-            this.btnEditAddress.Size = new System.Drawing.Size(235, 70);
-            this.btnEditAddress.TabIndex = 20;
-            this.btnEditAddress.Text = "Edit";
-            this.btnEditAddress.UseVisualStyleBackColor = false;
-            // 
-            // btnEditEmail
-            // 
-            this.btnEditEmail.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEditEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditEmail.Location = new System.Drawing.Point(1428, 600);
-            this.btnEditEmail.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnEditEmail.Name = "btnEditEmail";
-            this.btnEditEmail.Size = new System.Drawing.Size(235, 70);
-            this.btnEditEmail.TabIndex = 21;
-            this.btnEditEmail.Text = "Edit";
-            this.btnEditEmail.UseVisualStyleBackColor = false;
+            this.btnChangeData.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnChangeData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnChangeData.Location = new System.Drawing.Point(135, 861);
+            this.btnChangeData.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnChangeData.Name = "btnChangeData";
+            this.btnChangeData.Size = new System.Drawing.Size(405, 70);
+            this.btnChangeData.TabIndex = 18;
+            this.btnChangeData.Text = "Change Data";
+            this.btnChangeData.UseVisualStyleBackColor = false;
+            this.btnChangeData.Click += new System.EventHandler(this.btnChangeData_Click);
             // 
             // btnChangePassword
             // 
             this.btnChangePassword.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnChangePassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnChangePassword.Location = new System.Drawing.Point(135, 900);
+            this.btnChangePassword.Location = new System.Drawing.Point(135, 981);
             this.btnChangePassword.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(488, 70);
             this.btnChangePassword.TabIndex = 22;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBack.Location = new System.Drawing.Point(135, 1013);
+            this.btnBack.Location = new System.Drawing.Point(135, 1099);
             this.btnBack.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(235, 70);
@@ -196,79 +159,67 @@
             this.lblProfilePage.TabIndex = 24;
             this.lblProfilePage.Text = "Profile Page";
             // 
-            // lblProfileFullname
-            // 
-            this.lblProfileFullname.AutoSize = true;
-            this.lblProfileFullname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProfileFullname.Location = new System.Drawing.Point(760, 271);
-            this.lblProfileFullname.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.lblProfileFullname.Name = "lblProfileFullname";
-            this.lblProfileFullname.Size = new System.Drawing.Size(203, 55);
-            this.lblProfileFullname.TabIndex = 25;
-            this.lblProfileFullname.Text = "John Doe";
-            this.lblProfileFullname.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblProfileUsername
-            // 
-            this.lblProfileUsername.AutoSize = true;
-            this.lblProfileUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProfileUsername.Location = new System.Drawing.Point(760, 391);
-            this.lblProfileUsername.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.lblProfileUsername.Name = "lblProfileUsername";
-            this.lblProfileUsername.Size = new System.Drawing.Size(221, 55);
-            this.lblProfileUsername.TabIndex = 26;
-            this.lblProfileUsername.Text = "johndoe69";
-            // 
-            // lblProfileAddress
-            // 
-            this.lblProfileAddress.AutoSize = true;
-            this.lblProfileAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProfileAddress.Location = new System.Drawing.Point(760, 502);
-            this.lblProfileAddress.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.lblProfileAddress.Name = "lblProfileAddress";
-            this.lblProfileAddress.Size = new System.Drawing.Size(435, 55);
-            this.lblProfileAddress.TabIndex = 27;
-            this.lblProfileAddress.Text = "57000 Kuala Lumpur";
-            // 
             // lblProfileRole
             // 
             this.lblProfileRole.AutoSize = true;
             this.lblProfileRole.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProfileRole.Location = new System.Drawing.Point(760, 739);
+            this.lblProfileRole.Location = new System.Drawing.Point(719, 739);
             this.lblProfileRole.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblProfileRole.Name = "lblProfileRole";
-            this.lblProfileRole.Size = new System.Drawing.Size(227, 55);
+            this.lblProfileRole.Size = new System.Drawing.Size(48, 55);
             this.lblProfileRole.TabIndex = 28;
-            this.lblProfileRole.Text = "Technician";
+            this.lblProfileRole.Text = "_";
             // 
-            // lblProfileEmail
+            // fieldFullname
             // 
-            this.lblProfileEmail.AutoSize = true;
-            this.lblProfileEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProfileEmail.Location = new System.Drawing.Point(760, 617);
-            this.lblProfileEmail.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.lblProfileEmail.Name = "lblProfileEmail";
-            this.lblProfileEmail.Size = new System.Drawing.Size(352, 55);
-            this.lblProfileEmail.TabIndex = 29;
-            this.lblProfileEmail.Text = "jojof@gmail.com";
+            this.fieldFullname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fieldFullname.Location = new System.Drawing.Point(729, 264);
+            this.fieldFullname.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.fieldFullname.Name = "fieldFullname";
+            this.fieldFullname.Size = new System.Drawing.Size(592, 63);
+            this.fieldFullname.TabIndex = 30;
+            // 
+            // fieldUsername
+            // 
+            this.fieldUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fieldUsername.Location = new System.Drawing.Point(729, 372);
+            this.fieldUsername.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.fieldUsername.Name = "fieldUsername";
+            this.fieldUsername.Size = new System.Drawing.Size(592, 63);
+            this.fieldUsername.TabIndex = 31;
+            // 
+            // fieldAddress
+            // 
+            this.fieldAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fieldAddress.Location = new System.Drawing.Point(729, 490);
+            this.fieldAddress.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.fieldAddress.Name = "fieldAddress";
+            this.fieldAddress.Size = new System.Drawing.Size(592, 63);
+            this.fieldAddress.TabIndex = 32;
+            // 
+            // fieldEmail
+            // 
+            this.fieldEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fieldEmail.Location = new System.Drawing.Point(729, 609);
+            this.fieldEmail.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.fieldEmail.Name = "fieldEmail";
+            this.fieldEmail.Size = new System.Drawing.Size(592, 63);
+            this.fieldEmail.TabIndex = 33;
             // 
             // ProfileView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2285, 1440);
-            this.Controls.Add(this.lblProfileEmail);
+            this.Controls.Add(this.fieldEmail);
+            this.Controls.Add(this.fieldAddress);
+            this.Controls.Add(this.fieldUsername);
+            this.Controls.Add(this.fieldFullname);
             this.Controls.Add(this.lblProfileRole);
-            this.Controls.Add(this.lblProfileAddress);
-            this.Controls.Add(this.lblProfileUsername);
-            this.Controls.Add(this.lblProfileFullname);
             this.Controls.Add(this.lblProfilePage);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnChangePassword);
-            this.Controls.Add(this.btnEditEmail);
-            this.Controls.Add(this.btnEditAddress);
-            this.Controls.Add(this.btnEditUsername);
-            this.Controls.Add(this.btnEditFullname);
+            this.Controls.Add(this.btnChangeData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblUsername);
@@ -278,7 +229,7 @@
             this.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.Name = "ProfileView";
             this.Text = "Profile Page";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.ProfileView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,17 +243,14 @@
         private Label lblAddress;
         private Label lblFullname;
         private Label label1;
-        private Button btnEditFullname;
-        private Button btnEditUsername;
-        private Button btnEditAddress;
-        private Button btnEditEmail;
+        private Button btnChangeData;
         private Button btnChangePassword;
         private Button btnBack;
         private Label lblProfilePage;
-        private Label lblProfileFullname;
-        private Label lblProfileUsername;
-        private Label lblProfileAddress;
         private Label lblProfileRole;
-        private Label lblProfileEmail;
+        private TextBox fieldFullname;
+        private TextBox fieldUsername;
+        private TextBox fieldAddress;
+        private TextBox fieldEmail;
     }
 }
