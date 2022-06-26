@@ -18,7 +18,7 @@ namespace code
         {
             InitializeComponent();
             _user = user;
-            MessageBox.Show(user.role, user.username);
+            // MessageBox.Show(user.role, user.username);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)

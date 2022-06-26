@@ -25,5 +25,10 @@ namespace code
                 return $"{requestID} | {datePaid} | {customerUsername}";
             } 
         }
+
+        public Request ()
+        {
+
+        }
     }
 }

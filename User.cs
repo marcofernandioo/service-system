@@ -15,6 +15,11 @@ namespace code
             this.role = role;
         }
 
+        public User ()
+        {
+
+        }
+
         public string username { get; set; }
         public string password { get; set; }
         public string role { get; set; }

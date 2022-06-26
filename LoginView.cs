@@ -14,68 +14,64 @@ namespace code
 {
     public partial class LoginView : Form
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+        // SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
         public LoginView()
         {
             InitializeComponent();
         }
 
-        public User Login(string username, string password, string role)
+        public User Login(string uname, string upass)
         {
+            User tempUser = new User();
             // Fake Login function. Change later.
-            User user = new User(username, password, role);
+            DBAccess db = new DBAccess();
+            tempUser = db.GetUserByUsername(uname).FirstOrDefault();
+            if (tempUser == null)
+            {
+                MessageBox.Show("User not found.");
+                return null;
+            }
+            if (tempUser.password != upass)
+            {
+                MessageBox.Show("Wrong Password");
+                return null;
+            }
+            User user = new User(tempUser.username, tempUser.password, tempUser.role);
             return user;
+            
         }
 
         private void LoginView_Load(object sender, EventArgs e)
         {
-            // DBAccess db = new DBAccess();
-            // db.CreateDummyUser("", "", "", "", "", "");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // 1. Get User input.
-            // 2. Get User's Password from database.
-            // 3. If success -> Return user data.
-            //    if not -> Return error message.
-            User user = Login("username0", "123", "Receptionist");
-            Navigation nav = new Navigation();
-
-            User obj1 = new User(tboxUsername.Text, tboxPassword.Text,"");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM user WHERE username ='" + obj1.username + "' AND password = '" + obj1.password + "'", con);
-            int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-
-            if (count > 0)
+            User user = Login(tboxUsername.Text, tboxPassword.Text);
+            if (user == null) // Login Failed.
             {
-                SqlCommand cmd2 = new SqlCommand("SELECT role FROM user WHERE username ='" + obj1.username + "'", con);
-                string userRole = cmd2.ExecuteScalar().ToString();
-                if (userRole == "Customer")
-                {
-                    nav.DisplayCustomerView(user);
-                }
-                else if (userRole == "Receptionist")
-                {
-                    nav.DisplayReceptionistView(user);
-                }
-                else if (userRole == "Technician")
-                {
-                    nav.DisplayTechnicianView(user);
-
-                }
-                else if (userRole == "Manager")
-                {
-                    nav.DisplayManagerView(user);
-                }
-            }else
-            {
-                MessageBox.Show("Incorrect Username or Password!");
-            con.Close();
+                tboxPassword.Clear();
+                return;
             }
+            Navigation nav = new Navigation();
+            string userRole = user.role;
+            if (userRole == "Customer")
+            {
+                nav.DisplayCustomerView(user);
+            }
+            else if (userRole == "Receptionist")
+            {
+                nav.DisplayReceptionistView(user);
+            }
+            else if (userRole == "Technician")
+            {
+                nav.DisplayTechnicianView(user);
 
-
-
+            }
+            else if (userRole == "Manager")
+            {
+                nav.DisplayManagerView(user);
+            }
             this.Hide();
         }
 

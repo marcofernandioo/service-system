@@ -10,14 +10,47 @@ namespace code
 {
     public class DBAccess
     {
-        string connectionString = "Data Source=ZEPHYRUSG14\\SQLEXPRESS;Initial Catalog=ServiceSystem;Integrated Security=True;";
+        string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\_University\\IOOP\\_Assignment\\code\\Database1.mdf;Integrated Security=True";
         public List<Request> GetAllRequests()
         {
             using(IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                return conn.Query<Request>("SELECT * FROM Request").ToList();
+                return conn.Query<Request>("SELECT * FROM Requests").ToList();
             }
         }
+        public List<User> GetAllUsers()
+        {
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<User>("SELECT * FROM Users").ToList();
+            }
+        }
+
+        public List<User> GetCustomerWithName (string name)
+        {
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                if (name == "")
+                {
+                    return new List<User>();
+                }
+                else
+                {
+                    return conn.Query<User>($"SELECT * FROM Users WHERE username LIKE '{name}%';").ToList();
+                }
+            }
+        }
+
+        public List<User> GetUserByUsername(string uname)
+        {
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<User>($"SELECT * FROM Users WHERE username = '{uname}';").ToList();
+            }
+        }
+
+       
+
         public List<Request> GetTechnicianFixingRequests(string username)//cant
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))

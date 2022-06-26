@@ -34,6 +34,7 @@
             this.btnProfile = new System.Windows.Forms.Button();
             this.contReceptionist = new System.Windows.Forms.TabControl();
             this.pageCreate = new System.Windows.Forms.TabPage();
+            this.fieldUsername = new System.Windows.Forms.ComboBox();
             this.btnCreateReq = new System.Windows.Forms.Button();
             this.fieldFullname = new System.Windows.Forms.TextBox();
             this.fieldEmail = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.radUrgent = new System.Windows.Forms.RadioButton();
             this.radNormal = new System.Windows.Forms.RadioButton();
             this.fieldServiceType = new System.Windows.Forms.ComboBox();
-            this.fieldUsername = new System.Windows.Forms.TextBox();
             this.lblUrgency = new System.Windows.Forms.Label();
             this.lblServiceType = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -117,6 +117,7 @@
             // 
             // pageCreate
             // 
+            this.pageCreate.Controls.Add(this.fieldUsername);
             this.pageCreate.Controls.Add(this.btnCreateReq);
             this.pageCreate.Controls.Add(this.fieldFullname);
             this.pageCreate.Controls.Add(this.fieldEmail);
@@ -129,7 +130,6 @@
             this.pageCreate.Controls.Add(this.radUrgent);
             this.pageCreate.Controls.Add(this.radNormal);
             this.pageCreate.Controls.Add(this.fieldServiceType);
-            this.pageCreate.Controls.Add(this.fieldUsername);
             this.pageCreate.Controls.Add(this.lblUrgency);
             this.pageCreate.Controls.Add(this.lblServiceType);
             this.pageCreate.Controls.Add(this.lblUsername);
@@ -141,6 +141,24 @@
             this.pageCreate.TabIndex = 0;
             this.pageCreate.Text = "Create Request";
             this.pageCreate.UseVisualStyleBackColor = true;
+            // 
+            // fieldUsername
+            // 
+            this.fieldUsername.FormattingEnabled = true;
+            this.fieldUsername.Items.AddRange(new object[] {
+            "Remove Virus, Malware, Spyware ",
+            "Troubleshoot & Fix Slow Computer ",
+            "Laptop Screen Replacement ",
+            "Laptop Keyboard Replacement ",
+            "Laptop Battery Replacement ",
+            "OS Format & Installation ",
+            "Data Backup & Recovery ",
+            "Internet Connectivity Issues "});
+            this.fieldUsername.Location = new System.Drawing.Point(358, 153);
+            this.fieldUsername.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.fieldUsername.Name = "fieldUsername";
+            this.fieldUsername.Size = new System.Drawing.Size(656, 69);
+            this.fieldUsername.TabIndex = 19;
             // 
             // btnCreateReq
             // 
@@ -273,14 +291,6 @@
             this.fieldServiceType.TabIndex = 8;
             this.fieldServiceType.SelectedIndexChanged += new System.EventHandler(this.fieldServiceType_SelectedIndexChanged);
             // 
-            // fieldUsername
-            // 
-            this.fieldUsername.Location = new System.Drawing.Point(358, 151);
-            this.fieldUsername.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.fieldUsername.Name = "fieldUsername";
-            this.fieldUsername.Size = new System.Drawing.Size(659, 67);
-            this.fieldUsername.TabIndex = 7;
-            // 
             // lblUrgency
             // 
             this.lblUrgency.AutoSize = true;
@@ -326,6 +336,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(82, 67);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
@@ -390,7 +407,6 @@
         private RadioButton radUrgent;
         private RadioButton radNormal;
         private ComboBox fieldServiceType;
-        private TextBox fieldUsername;
         private Label lblUrgency;
         private Label lblServiceType;
         private Label lblUsername;
@@ -407,5 +423,6 @@
         private BindingSource requestBindingSource1;
         private DataGridView dataGridView1;
         private BindingSource requestBindingSource2;
+        private ComboBox fieldUsername;
     }
 }
