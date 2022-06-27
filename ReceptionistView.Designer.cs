@@ -85,9 +85,9 @@
             this.lblGreeting.Location = new System.Drawing.Point(148, 132);
             this.lblGreeting.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblGreeting.Name = "lblGreeting";
-            this.lblGreeting.Size = new System.Drawing.Size(890, 76);
+            this.lblGreeting.Size = new System.Drawing.Size(55, 76);
             this.lblGreeting.TabIndex = 1;
-            this.lblGreeting.Text = "Welcome, Michael Henri Muljadi!";
+            this.lblGreeting.Text = "-";
             this.lblGreeting.Click += new System.EventHandler(this.lblGreeting_Click);
             // 
             // btnProfile
@@ -145,20 +145,12 @@
             // fieldUsername
             // 
             this.fieldUsername.FormattingEnabled = true;
-            this.fieldUsername.Items.AddRange(new object[] {
-            "Remove Virus, Malware, Spyware ",
-            "Troubleshoot & Fix Slow Computer ",
-            "Laptop Screen Replacement ",
-            "Laptop Keyboard Replacement ",
-            "Laptop Battery Replacement ",
-            "OS Format & Installation ",
-            "Data Backup & Recovery ",
-            "Internet Connectivity Issues "});
             this.fieldUsername.Location = new System.Drawing.Point(358, 153);
             this.fieldUsername.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.fieldUsername.Name = "fieldUsername";
             this.fieldUsername.Size = new System.Drawing.Size(656, 69);
             this.fieldUsername.TabIndex = 19;
+            this.fieldUsername.TextChanged += new System.EventHandler(this.fieldUsername_TextChanged);
             // 
             // btnCreateReq
             // 
@@ -174,7 +166,7 @@
             // 
             // fieldFullname
             // 
-            this.fieldFullname.Location = new System.Drawing.Point(1352, 372);
+            this.fieldFullname.Location = new System.Drawing.Point(1352, 167);
             this.fieldFullname.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.fieldFullname.Name = "fieldFullname";
             this.fieldFullname.Size = new System.Drawing.Size(559, 67);
@@ -182,7 +174,7 @@
             // 
             // fieldEmail
             // 
-            this.fieldEmail.Location = new System.Drawing.Point(1352, 262);
+            this.fieldEmail.Location = new System.Drawing.Point(1352, 384);
             this.fieldEmail.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.fieldEmail.Name = "fieldEmail";
             this.fieldEmail.Size = new System.Drawing.Size(559, 67);
@@ -190,7 +182,7 @@
             // 
             // fieldAddress
             // 
-            this.fieldAddress.Location = new System.Drawing.Point(1352, 161);
+            this.fieldAddress.Location = new System.Drawing.Point(1352, 270);
             this.fieldAddress.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.fieldAddress.Name = "fieldAddress";
             this.fieldAddress.Size = new System.Drawing.Size(559, 67);
@@ -212,9 +204,9 @@
             this.fieldFee.Location = new System.Drawing.Point(358, 497);
             this.fieldFee.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.fieldFee.Name = "fieldFee";
-            this.fieldFee.Size = new System.Drawing.Size(164, 61);
+            this.fieldFee.Size = new System.Drawing.Size(45, 61);
             this.fieldFee.TabIndex = 11;
-            this.fieldFee.Text = "RM. 90";
+            this.fieldFee.Text = "-";
             this.fieldFee.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblEmail
@@ -271,6 +263,7 @@
             this.radNormal.TabStop = true;
             this.radNormal.Text = "Normal";
             this.radNormal.UseVisualStyleBackColor = true;
+            this.radNormal.CheckedChanged += new System.EventHandler(this.radNormal_CheckedChanged);
             // 
             // fieldServiceType
             // 

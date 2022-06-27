@@ -33,6 +33,8 @@ namespace code
 
             myWorks = db.GetTechnicianFixingRequests(_user.username);
             dataGridView2.DataSource = myWorks;
+
+            lblGreeting.Text = "Hello, " + _user.fullname;
         }
 
         private void contTechnician_SelectedIndexChanged(object sender, EventArgs e)

@@ -45,7 +45,8 @@ namespace code
 
         private void ManagerView_Load(object sender, EventArgs e)
         {
-            
+
+            lblGreeting.Text = "Hello, " + _user.fullname;
         }
 
         private void btnGenerateReport_Click(object sender, EventArgs e)
@@ -53,6 +54,28 @@ namespace code
             DBAccess db = new DBAccess();
             requestRange = db.GetAllDoneRequestsFromRange(fieldStartDate.Text, fieldEndDate.Text);
             dbReport.DataSource = requestRange;
+        }
+
+        private void btnCreateStaff_Click(object sender, EventArgs e)
+        {
+            string fullname = fieldFullname.Text;
+            string username = fieldUsername.Text;
+            string address = fieldAddress.Text;
+            string email = fieldEmail.Text;
+            string password = "admin";
+            string role = fieldRole.SelectedItem.ToString();
+
+
+            if (fullname == "" || username == "" || address == "" || email == "" )
+            {
+                MessageBox.Show("Incomplete data. Enter again.");
+                return;
+            }
+
+            User newUser = new User(1, fullname, username, password, "01/01/2000", email, address, role);
+            DBAccess db = new DBAccess();
+            db.CreateUser(newUser);
+            MessageBox.Show($"User created with username '{username}', and password admin.'");
         }
     }
 }

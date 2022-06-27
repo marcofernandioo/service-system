@@ -43,6 +43,7 @@ namespace code
             DBAccess db = new DBAccess();
             history = db.GetCustomerRequestHistory(_user.username);
             DGVhistory.DataSource = history;
+            lblGreeting.Text = "Hello, " + _user.fullname;
         }
     }
 }

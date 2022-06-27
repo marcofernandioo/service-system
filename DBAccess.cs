@@ -116,5 +116,14 @@ namespace code
                 conn.Execute($"UPDATE Users SET fullname = '{user.fullname}', username = '{user.username}', password = '{user.password}', email = '{user.email}', address = '{user.address}' WHERE UserID = {uid};");
             }
         }
+
+        public void CreateUser(User user)
+        {
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                conn.Execute($"INSERT INTO Users VALUES ('{user.fullname}', '{user.username}', '{user.password}', '01/01/2000', '{user.email}', '{user.address}', '{user.role}');");
+            }
+        }
+
     }
 }

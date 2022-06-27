@@ -43,6 +43,7 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblFullname = new System.Windows.Forms.Label();
             this.pageReport = new System.Windows.Forms.TabPage();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.dbReport = new System.Windows.Forms.DataGridView();
             this.fieldEndDate = new System.Windows.Forms.TextBox();
             this.fieldStartDate = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.lblEnd = new System.Windows.Forms.Label();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.pageRegisterStaff.SuspendLayout();
             this.pageReport.SuspendLayout();
@@ -128,6 +128,7 @@
             this.btnCreateStaff.TabIndex = 12;
             this.btnCreateStaff.Text = "Create Staff";
             this.btnCreateStaff.UseVisualStyleBackColor = false;
+            this.btnCreateStaff.Click += new System.EventHandler(this.btnCreateStaff_Click);
             // 
             // fieldEmail
             // 
@@ -238,6 +239,19 @@
             this.pageReport.Text = "Reports";
             this.pageReport.UseVisualStyleBackColor = true;
             // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.BackColor = System.Drawing.Color.Silver;
+            this.btnGenerateReport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGenerateReport.Location = new System.Drawing.Point(82, 165);
+            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(479, 70);
+            this.btnGenerateReport.TabIndex = 16;
+            this.btnGenerateReport.Text = "Generate Report";
+            this.btnGenerateReport.UseVisualStyleBackColor = false;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            // 
             // dbReport
             // 
             this.dbReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -315,19 +329,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnGenerateReport
-            // 
-            this.btnGenerateReport.BackColor = System.Drawing.Color.Silver;
-            this.btnGenerateReport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGenerateReport.Location = new System.Drawing.Point(82, 165);
-            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(479, 70);
-            this.btnGenerateReport.TabIndex = 16;
-            this.btnGenerateReport.Text = "Generate Report";
-            this.btnGenerateReport.UseVisualStyleBackColor = false;
-            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // ManagerView
             // 

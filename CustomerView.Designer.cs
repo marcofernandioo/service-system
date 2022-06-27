@@ -135,9 +135,9 @@
             this.lblGreeting.Location = new System.Drawing.Point(38, 74);
             this.lblGreeting.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblGreeting.Name = "lblGreeting";
-            this.lblGreeting.Size = new System.Drawing.Size(150, 64);
+            this.lblGreeting.Size = new System.Drawing.Size(45, 64);
             this.lblGreeting.TabIndex = 16;
-            this.lblGreeting.Text = "Hello";
+            this.lblGreeting.Text = "-";
             // 
             // CustomerView
             // 
