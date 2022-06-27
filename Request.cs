@@ -8,27 +8,28 @@ namespace code
 {
     public class Request
     {
-        string requestID { get; set; }
-        string columnRequestID
-        {
-            get { return requestID; }
-        }
-        string datePaid { get; set; }
-        string serviceType { get; set; }
-        string urgency { get; set; }
-        string customerUsername { get; set; }
-        string technicianUsername { get; set; }
-        string RequestInfo 
-        { 
-            get
-            {
-                return $"{requestID} | {datePaid} | {customerUsername}";
-            } 
-        }
+        public int requestID { get; set; }
+        public string datePaid { get; set; }
+        public string serviceType { get; set; }
+        public string urgency { get; set; }
+        public int customerID { get; set; }
+        public int technicianID { get; set; }
+        
 
         public Request ()
         {
 
         }
+
+        public Request(int requestID, string datePaid, string serviceType, string urgency, int customerID, int technicianID)
+        {
+            this.requestID = requestID;
+            this.datePaid = datePaid;
+            this.serviceType = serviceType;
+            this.urgency = urgency;
+            this.customerID = customerID;
+            this.technicianID = technicianID;
+        }
+
     }
 }

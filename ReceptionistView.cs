@@ -17,6 +17,7 @@ namespace code
         List<User> users = new List<User>();
 
         public string price;
+        public int customerID;
         public static User _user;
         public ReceptionistView(User user)
         {
@@ -28,16 +29,9 @@ namespace code
         private void ReceptionistView_Load(object sender, EventArgs e)
         {
             DBAccess db = new DBAccess();
-            users = db.GetAllUsers();
+            users = db.GetAllCustomers();
             dataGridView1.DataSource = users;
             lblGreeting.Text = "Hello, " + _user.fullname;
-        }
-        private void fieldUsername_TextChanged(object sender, EventArgs e)
-        {
-            fieldFullname.Text = fieldUsername.Text;
-            DBAccess db = new DBAccess();
-            users = db.GetCustomerWithName(fieldUsername.Text);
-            //ChangeBindingListTo(users);
         }
         private void ChangeBindingListTo(List<User> list)
         {
@@ -46,6 +40,13 @@ namespace code
             fieldUsername.DataSource = bindingSource.DataSource;
             fieldUsername.DisplayMember = "username";
             fieldUsername.ValueMember = "username";
+        }
+
+        private void dropdownClick (object sender, EventArgs e)
+        {
+            DBAccess db = new DBAccess();
+            users = db.GetCustomerWithName(fieldUsername.Text);
+            ChangeBindingListTo(users);
         }
 
         private void lblGreeting_Click(object sender, EventArgs e)
@@ -140,32 +141,6 @@ namespace code
                 price = 0;
             }
             fieldFee.Text = $"RM. {price}";
-            /*
-            int price;
-            string urgency;
-           int type = fieldServiceType.SelectedIndex;
-           if (radNormal.Checked)
-            {
-                if (type == 0)
-                {
-                    price = 50;
-                }
-                if (type == 1)
-                {
-                    price = 60;
-                }
-            }
-            else if (radUrgent.Checked)
-            {
-                if (type == 0)
-                {
-                    price = 80;
-                }
-                if (type == 1)
-                {
-                    price = 90;
-                }
-            }*/
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -204,6 +179,41 @@ namespace code
             lc.Show();
         }
 
-        
+        private void fieldUsername_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DBAccess db = new DBAccess();
+            User user = new User();
+            user = db.GetUserByUsername(fieldUsername.SelectedValue.ToString()).FirstOrDefault();
+            fieldFullname.Text = user.fullname;
+            fieldAddress.Text = user.address;
+            fieldEmail.Text = user.email;
+            customerID = user.UserID;
+        }
+
+        private void btnCreateReq_Click(object sender, EventArgs e)
+        {
+            string urgency;
+            string uname = fieldUsername.Text;
+            if (radUrgent.Checked)
+            {
+                urgency = "urgent";
+            }
+            else
+            {
+                urgency = "normal";
+            }
+            DBAccess db = new DBAccess();
+            if (!db.UsernameExists(fieldUsername.Text))
+            {
+
+                User newUser = new User(1, fieldFullname.Text, uname, "default", "01/01/2000", fieldEmail.Text, fieldAddress.Text, "Customer");
+                customerID = db.CreateUser(newUser);
+                MessageBox.Show("New User");
+            }
+            customerID = db.GetCustomerIDbyUsername(uname);
+            Request req = new Request(1, DateTime.Now.ToString(), fieldServiceType.Text, urgency,customerID,0);
+            MessageBox.Show(customerID.ToString()); ;
+            db.CreateRequest(req);
+        }
     }
 }

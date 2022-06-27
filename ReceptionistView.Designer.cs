@@ -69,7 +69,7 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogout.Location = new System.Drawing.Point(1835, 163);
+            this.btnLogout.Location = new System.Drawing.Point(1836, 132);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(322, 134);
@@ -93,7 +93,7 @@
             // btnProfile
             // 
             this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProfile.Location = new System.Drawing.Point(1425, 163);
+            this.btnProfile.Location = new System.Drawing.Point(1422, 132);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(320, 134);
@@ -150,7 +150,8 @@
             this.fieldUsername.Name = "fieldUsername";
             this.fieldUsername.Size = new System.Drawing.Size(656, 69);
             this.fieldUsername.TabIndex = 19;
-            this.fieldUsername.TextChanged += new System.EventHandler(this.fieldUsername_TextChanged);
+            this.fieldUsername.DropDown += new System.EventHandler(this.dropdownClick);
+            this.fieldUsername.SelectionChangeCommitted += new System.EventHandler(this.fieldUsername_SelectedIndexChanged);
             // 
             // btnCreateReq
             // 
@@ -163,6 +164,7 @@
             this.btnCreateReq.TabIndex = 18;
             this.btnCreateReq.Text = "Create";
             this.btnCreateReq.UseVisualStyleBackColor = false;
+            this.btnCreateReq.Click += new System.EventHandler(this.btnCreateReq_Click);
             // 
             // fieldFullname
             // 

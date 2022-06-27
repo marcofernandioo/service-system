@@ -18,3 +18,20 @@ insert into Requests values
 SELECT * FROM Requests WHERE Status = 'Fixing' AND TechnicianID = (SELECT UserID FROM Users WHERE Users.Username = 'mmm');
 
 SELECT * FROM Requests where Status = 'Done' AND CustomerID = (SELECT UserID FROM Users WHERE Username = 'jann');
+
+SELECT * FROM Users WHERE Role = 'Customer';
+
+SELECT COUNT(1) FROM Users WHERE username = 'jann' AND role = 'Customer';
+
+ALTER TABLE Requests ADD Revenue int;
+
+SELECT UserID FROM Users WHERE username = 'cuss';
+
+insert into Requests values
+('01/01/2022', 'A', 'Normal', 'Pending', 1, NULL, 90);
+
+SELECT RequestID FROM Requests WHERE Status = 'Pending' AND Revenue = 90; 
+
+SELECT TOP 1 UserID FROM Users ORDER BY UserID DESC;
+
+SELECT COUNT(1) FROM Users WHERE username = 'pp' AND role = 'Customer';

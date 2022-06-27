@@ -26,6 +26,13 @@ namespace code
             }
         }
 
+        public List<User> GetAllCustomers()
+        {
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                return conn.Query<User>("SELECT * FROM Users WHERE Role = 'Customer';").ToList();
+            }
+        }
         public List<User> GetCustomerWithName (string name)
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
@@ -36,7 +43,7 @@ namespace code
                 }
                 else
                 {
-                    return conn.Query<User>($"SELECT * FROM Users WHERE username LIKE '{name}%';").ToList();
+                    return conn.Query<User>($"SELECT * FROM Users WHERE username LIKE '{name}%' AND Role = 'Customer';").ToList();
                 }
             }
         }
@@ -91,23 +98,34 @@ namespace code
                 return conn.Query<Request>($"SELECT * FROM Requests where DatePaid > '{start}' AND DatePaid < '{end}';").ToList();
             }
         }
-        public string GetLastPKfromRequestsTable()
+
+        public int GetCustomerIDbyUsername(string un)
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                // Getting the last PK of 
-                // return conn.Execute("SELECT TOP 1 * FROM Table ORDER BY ID DESC"); 
-                return "";
+                int id;
+                id =  conn.Execute($"SELECT UserID FROM Users WHERE username = {un}");
+                return id;
             }
         }
-        public void CreateDummyUser(string fullname, string username, string password, string dob, string email, string addr, string role)
+
+        public bool UsernameExists(string un)
         {
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
-                string _id = GetLastPKfromRequestsTable();
-                conn.Execute($"INSERT INTO Users VALUES ('{_id}', '{fullname}', '{username}', '{password}', '{dob}', '{email}', '{addr}', '{role}')");
+                int _int;
+                _int = conn.Execute($"SELECT COUNT(1) FROM Users WHERE username = '{un}' AND role = 'Customer';");
+                if (_int == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
+
         public void UpdateUserData(User user)
         {
             int uid = user.UserID;
@@ -117,12 +135,25 @@ namespace code
             }
         }
 
-        public void CreateUser(User user)
+        public int CreateUser(User user)
         {
+            int _id;
             using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
             {
                 conn.Execute($"INSERT INTO Users VALUES ('{user.fullname}', '{user.username}', '{user.password}', '01/01/2000', '{user.email}', '{user.address}', '{user.role}');");
+                _id = conn.Execute($"SELECT SCOPE_IDENTITY();");
+                //SELECT TOP 1 * FROM Table ORDER BY ID DESC
+                return _id;
             }
+        }
+
+        public void CreateRequest(Request req)
+        {
+            using (IDbConnection conn = new System.Data.SqlClient.SqlConnection(connectionString))
+            {
+                conn.Execute($"INSERT INTO Requests VALUES ('{req.datePaid}', '{req.serviceType}', '{req.urgency}', '{req.customerID}', '{null}');");
+            }
+
         }
 
     }
